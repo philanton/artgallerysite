@@ -2,37 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Picture gallery and auctions.">
+    <meta name="keywords" content="Auction, Picture, Gallery">
+    <meta name="author" content="Enthony Phil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна.</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
+    <style media="screen">
+      #SlideShow {
+        border: 5px dashed #4d004d;
+        overflow-y: auto;
+        padding: 15px;
+        margin: 20px;
+      }
+    </style>
   </head>
   <body>
-    <article>
-      <header>
-        <div class="Logo">
-          <img src="" alt="Logo">
-        </div>
-        <h1>Назва картинної галереї</h1>
-        <span>UA</span>
-        <nav>
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="news.html">Новини</a></li>
-            <li><a href="auction.html">Аукціони</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="account.html">Аккаунт</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h2>Головна</h2>
+    <header>
+      <nav>
+        <a href="index.html"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="auction.html">Аукціони</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="account.html">Аккаунт</a>
+      </nav>
+    </header>
+    <div class="Content">
+      <h1>Головна</h1>
       <div id="SlideShow">
         Тут буде слайд-шоу нових картин.
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWOaddodPcTijPPiMBENiYs_SHMniV1d1Bg&usqp=CAU" alt="Ducky">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrWOaddodPcTijPPiMBENiYs_SHMniV1d1Bg&usqp=CAU" alt="Ducky"
+        style="max-width:200px; max-height: 200px; float: right;">
       </div>
       <p>
         Параграф з описом сайту.
       </p>
-    </article>
+    </div>
     <footer>
       <div class="Contacts">
         <h2>Контакти</h2>

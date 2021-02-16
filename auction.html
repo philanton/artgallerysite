@@ -2,72 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Picture gallery and auctions.">
+    <meta name="keywords" content="Auction, Picture, Gallery">
+    <meta name="author" content="Enthony Phil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аукціони</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <article>
-      <header>
-        <div class="Logo">
-          <img src="" alt="Logo">
-        </div>
-        <h1>Назва картинної галереї</h1>
-        <span>UA</span>
-        <nav>
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="news.html">Новини</a></li>
-            <li><a href="auction.html">Аукціони</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="account.html">Аккаунт</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h2>Аукціони</h2>
-      <div class="Panel">
+    <header>
+      <nav>
+        <a href="index.html"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="auction.html">Аукціони</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="account.html">Аккаунт</a>
+      </nav>
+    </header>
+    <div class="Content">
+      <h1>Аукціони</h1>
+      <aside>
         <ul>
           <li>Активні</li>
           <li>Очікувані</li>
           <li>Минулі</li>
         </ul>
-      </div>
-      <div id="active" class="InfoTable">
-        <table>
-          <caption>Активні аукціони</caption>
-          <thead>
-            <tr>
-              <th>Інформація</th>
-              <th>Картина</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <table>
-                  <tr>
-                    <td>Автор</td>
-                  </tr>
-                  <tr>
-                    <td>Продавець</td>
-                  </tr>
-                  <tr>
-                    <td>Дата</td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="" alt="Зображення картини"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="future" class="InfoTable">
+      </aside>
+      <div class="Main">
+        <div id="active" class="InfoTable">
 
-      </div>
-      <div id="past" class="InfoTable">
+        </div>
+        <div id="future" class="InfoTable">
+          <table>
+            <caption>Очікувані аукціони</caption>
+            <thead>
+              <tr>
+                <th>Інформація</th>
+                <th>Картина</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Власник</td>
+                <td rowspan="3"><img src="" alt="Зображення картини"></td>
+              </tr>
+              <tr>
+                <td>Дата/час</td>
+              </tr>
+              <tr>
+                <td>Стартова ціна</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="past" class="InfoTable">
 
+        </div>
       </div>
-    </article>
+    </div>
     <footer>
       <div class="Contacts">
         <h2>Контакти</h2>

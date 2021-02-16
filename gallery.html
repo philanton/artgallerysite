@@ -2,48 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Picture gallery and auctions.">
+    <meta name="keywords" content="Auction, Picture, Gallery">
+    <meta name="author" content="Enthony Phil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Картинна галерея.</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
-    <article>
-      <header>
-        <div class="Logo">
-          <img src="" alt="Logo">
-        </div>
-        <h1>Назва картинної галереї</h1>
-        <span>UA</span>
-        <nav>
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="news.html">Новини</a></li>
-            <li><a href="auction.html">Аукціони</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="account.html">Аккаунт</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h2></h2>
-      <div class="Panel">
+    <header>
+      <nav>
+        <a href="index.html"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="auction.html">Аукціони</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="account.html">Аккаунт</a>
+      </nav>
+    </header>
+    <div class="Content">
+      <h1>Галерея</h1>
+      <aside>
         <h2>Фільтрація</h2>
         <form class="" action="/" method="post">
           <fieldset>
             <legend>Тип картини</legend>
-            <input type="checkbox" name="type1" value="">Type 1 <br>
-            <input type="checkbox" name="type2" value="">Type 2 <br>
-            <input type="checkbox" name="type3" value="">Type 3 <br>
+            <input type="checkbox" id="type1" name="type1" value="">
+            <label for="type1">Type 1</label> <br>
+            <input type="checkbox" id="type2" name="type2" value="">
+            <label for="type2">Type 2</label> <br>
+            <input type="checkbox" id="type3" name="type3" value="">
+            <label for="type3">Type 3</label> <br>
           </fieldset>
           <fieldset>
             <legend>Ціна картини</legend>
             <label for="min">Min: </label>
-            <input type="number" name="min" min="0" step="10">
+            <input type="number" id="min" name="min" min="0" step="10">
             <label for="max">Max: </label>
-            <input type="number" name="max" min="0" step="10">
+            <input type="number" id="max" name="max" min="0" step="10">
           </fieldset>
         </form>
+      </aside>
+      <div class="Main">
+        <figure>
+          <img src="" alt="Example">
+          <figcaption>Example</figcaption>
+        </figure>
       </div>
-    </article>
+    </div>
     <footer>
       <div class="Contacts">
         <h2>Контакти</h2>

@@ -1,0 +1,110 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  background-color: #ffaa80;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: #ffffb3;
+  margin: auto;
+  background-color: #606;
+  text-align: center;
+  border: 5px solid #4d004d;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #606;
+}
+
+nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffb3;
+  padding: 15px;
+}
+
+nav a:last-child {
+  float: right;
+}
+
+nav a:hover {
+  background-color: #4d004d;
+}
+
+#Logo {
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 2px solid #ffffb3;
+}
+
+.Content {
+  padding: 15px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .Content {
+  padding-top: 60px;
+}
+
+h1 {
+  max-width: 20%;
+  padding: 5px 200px;
+  border-radius: 20px;
+}
+
+aside {
+  max-width: 230px;
+  border-top: 5px solid #4d004d;
+  border-right: 5px solid #4d004d;
+  border-top-right-radius: 20px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  top: 150px;
+  left: 20px;
+  overflow-x: hidden;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2, aside li {
+  margin: 5px;
+  border: 5px solid #4d004d;
+  background-color: #606;
+  color: #ffffb3;
+  padding: 5px 15px;
+}
+
+h2 {
+  border-top-right-radius: 15px;
+  background-color: #b300b3;
+}
+
+.Main {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+p {
+  text-indent: 50px;
+}
