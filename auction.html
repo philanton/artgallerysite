@@ -7,8 +7,7 @@
     <meta name="author" content="Enthony Phil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аукціони</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="styles/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -24,16 +23,16 @@
       <h1>Аукціони</h1>
       <aside>
         <ul>
-          <li>Активні</li>
-          <li>Очікувані</li>
-          <li>Минулі</li>
+          <li class="tab" onclick="openTabContent(event, 'Active')">Активні</li>
+          <li class="tab" onclick="openTabContent(event, 'Future')">Очікувані</li>
+          <li class="tab" onclick="openTabContent(event, 'Past')">Минулі</li>
         </ul>
       </aside>
       <div class="Main">
-        <div id="active" class="InfoTable">
+        <div id="Active" class="tabContent">
 
         </div>
-        <div id="future" class="InfoTable">
+        <div id="Future" class="tabContent">
           <table>
             <caption>Очікувані аукціони</caption>
             <thead>
@@ -56,7 +55,7 @@
             </tbody>
           </table>
         </div>
-        <div id="past" class="InfoTable">
+        <div id="Past" class="tabContent">
 
         </div>
       </div>
@@ -75,5 +74,6 @@
         <ul></ul>
       </div>
     </footer>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

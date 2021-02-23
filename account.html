@@ -7,8 +7,7 @@
     <meta name="author" content="Enthony Phil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аккаунт.</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="account.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -25,18 +24,33 @@
       <aside>
         <img src="" alt="Profile Photo">
         <ul>
-          <li>Профіль</li>
-          <li>Картини</li>
-          <li>Настройки</li>
+          <li class="tab" onclick="openTabContent(event, 'Profile')">Профіль</li>
+          <li class="tab" onclick="openTabContent(event, 'Pictures')">Картини</li>
+          <li class="tab" onclick="openTabContent(event, 'Settings')">Настройки</li>
         </ul>
       </aside>
       <div class="Main">
-        <p>Рівень активності</p>
-        <p>Пошта</p>
-        <p>Діяльність</p>
-        <p>Дата народження</p>
-        <p>Номер телефону</p>
-        <p>Про себе: </p>
+        <div id="Profile" class="tabContent">
+          <p>Рівень активності</p>
+          <p>Пошта</p>
+          <p>Діяльність</p>
+          <p>Дата народження</p>
+          <p>Номер телефону</p>
+          <p>Про себе: </p>
+        </div>
+        <div id="Pictures" class="tabContent">
+
+        </div>
+        <div id="Settings" class="tabContent">
+          <button class="accordion">Змінити пароль</button>
+          <div class="panel">
+            <p>Here you'll change your password</p>
+          </div>
+          <button class="accordion">Настройки приватності</button>
+          <div class="panel">
+            <p>Here you'll change your private settings.</p>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -53,5 +67,7 @@
         <ul></ul>
       </div>
     </footer>
+    <script src="script.js"></script>
+    <script src="account.js" type="text/javascript"></script>
   </body>
 </html>
