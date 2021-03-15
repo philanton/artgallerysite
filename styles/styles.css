@@ -20,6 +20,10 @@ h1, h2, h3 {
   border-bottom: 5px solid var(--border-color);
 }
 
+h3 {
+  border-bottom: 3px groove var(--border-color);
+}
+
 nav {
   overflow: hidden;
   background-color: #06266f;
@@ -68,8 +72,6 @@ nav a:hover {
 h1 {
   max-width: 20%;
   padding: 5px 200px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
   margin: 10px auto;
   background-image: linear-gradient(rgba(0,0,0,0), var(--background-color));
 }
@@ -131,25 +133,11 @@ aside li.active {
   display: none;
 }
 
-h2 {
-  border-top-right-radius: 15px;
-  background-color: var(--background-color);
-}
-
 footer {
-  background-color: var(--background-color);
-  min-height: 300px;
-}
-
-footer > div {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 20px;
-  border-right: 2px solid var(--text-color);
-}
-
-footer > div:last-child {
-  border: none;
+  min-height: 100px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
 }
 
 p {
@@ -159,4 +147,25 @@ p {
 table, th, td {
   border: 2px solid var(--border-color);
   border-collapse: collapse;
+}
+
+.Contacts ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.Contacts li {
+  padding: 10px;
+  padding-top: 0;
+}
+
+.Contacts a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+.Contacts a:active {
+  text-shadow: 2px 2px 3px var(--default-color);
 }
