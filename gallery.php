@@ -15,11 +15,6 @@
     <script src="unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js"></script>
     <link rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
     <link href="styles/styles.css" rel="stylesheet">
-    <style media="screen">
-      .ui-slider-handle:active {
-        background-color: var(--default-color);
-      }
-    </style>
     <script type="text/javascript">
       $(document).ready(function() {
         $("#gallery").unitegallery({
@@ -40,19 +35,62 @@
           values: [15000, 90000],
           step: 500
         });
+        $("#spinner1").spinner({
+          min: 5000,
+          max: 100000,
+          step: 500
+        }).spinner("value", 15000);
+        $("#spinner2").spinner({
+          min: 5000,
+          max: 100000,
+          step: 500
+        }).spinner("value", 90000);
+        $( "#button" ).button();
+        $( "#radioset" ).buttonset();
       });
     </script>
+    <style media="screen">
+      .ui-slider-handle:active {
+        background-color: var(--default-color);
+      }
+      #spinners {
+        width: 100%;
+        padding: 10px 0;
+      }
+      .ui-spinner {
+        margin-right: 5px;
+        width: 45%;
+      }
+    </style>
   </head>
   <body>
+    <?php
+      $picType = "";
+      $picMin = $picMax = 0;
+      if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if (!empty($_GET["radio"])) {
+          $picType = clean($_GET["radio"]);
+        }
+        if (!empty($_GET["min"])) {
+          $picMin = clean($_GET["min"]);
+        }
+        if (!empty($_GET["max"])) {
+          $picMax = clean($_GET["max"]);
+        }
+      }
+      function clean($data) {
+        return htmlspecialchars(trim($data));
+      }
+    ?>
     <header>
       <nav>
-        <a href="index.html" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
-        <a href="news.html" title="Слідкуйте за оновленнями">Новини</a>
-        <a href="auction.html" title="Йдіть сюди, коли захочете продати чи
+        <a href="index.php" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.php" title="Слідкуйте за оновленнями">Новини</a>
+        <a href="auction.php" title="Йдіть сюди, коли захочете продати чи
         купити картини">Аукціони</a>
-        <a href="gallery.html" title="Йдіть сюди, коли захочете знайти чи просто
+        <a href="gallery.php" title="Йдіть сюди, коли захочете знайти чи просто
         подивитися картини">Галерея</a>
-        <a href="account.html" title="Тут ваша секретна база, редагуйте все, що
+        <a href="account.php" title="Тут ваша секретна база, редагуйте все, що
         потрібно">Аккаунт</a>
       </nav>
     </header>
@@ -60,16 +98,20 @@
       <h1>Галерея</h1>
       <aside>
         <h2 style="margin: 0; padding: 10px;">Фільтрація</h2>
-        <form class="" action="/" method="post" style="padding: 15px;">
-          <input type="checkbox" id="type1" name="type1" value="">
-          <label for="type1">Type 1</label> <br>
-          <input type="checkbox" id="type2" name="type2" value="">
-          <label for="type2">Type 2</label> <br>
-          <input type="checkbox" id="type3" name="type3" value="">
-          <label for="type3">Type 3</label> <br>
+        <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get" style="padding: 15px;">
+          <div id="radioset">
+            <input type="radio" id="radio1" name="radio" value="type1"><label for="radio1">Type 1</label>
+            <input type="radio" id="radio2" name="radio" value="type2" checked="checked"><label for="radio2">Type 2</label>
+          </div>
           <h3>Діапазон цін</h3>
           <div id="slider"></div>
+          <div id="spinners">
+            <input id="spinner1" name="min">
+            <input id="spinner2" name="max">
+          </div>
+          <button id="button">Submit</button>
         </form>
+        <?php echo "Ви вибрали картини типу ".$picType." у діапазоні цін від ".$picMin." до ".$picMax.".";?>
       </aside>
       <div class="Main">
         <div id="gallery">

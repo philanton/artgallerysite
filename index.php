@@ -6,78 +6,62 @@
     <meta name="keywords" content="Auction, Picture, Gallery">
     <meta name="author" content="Enthony Phil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккаунт.</title>
+    <title>Головна.</title>
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <script src="jquery-ui/external/jquery/jquery.js"></script>
     <script src="jquery-ui/jquery-ui.js"></script>
+    <script src="unitegallery/js/unitegallery.min.js"></script>
+    <link rel="stylesheet" href="unitegallery/css/unite-gallery.css">
+    <script src="unitegallery/themes/slider/ug-theme-slider.js"></script>
     <link rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
     <link href="styles/styles.css" rel="stylesheet">
-    <style media="screen">
-      .ui-accordion-content, .ui-accordion-header {
-        background-color: var(--default-color);
-        color: var(--text-color);
-        font-family: Helvetica, sans-serif;
-      }
-    </style>
     <script type="text/javascript">
       $(document).ready(function() {
-        $("#accordion").accordion({
-          icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
-          heightStyle: "content",
-          collapsible: true,
-          active: false
-        });
-      });
+        $("#slideShow").unitegallery({
+          gallery_theme: "slider",
+          slider_scale_mode: "fit"
+        })
+      })
     </script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
-        <a href="news.html" title="Слідкуйте за оновленнями">Новини</a>
-        <a href="auction.html" title="Йдіть сюди, коли захочете продати чи
+        <a href="index.php" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.php" title="Слідкуйте за оновленнями">Новини</a>
+        <a href="auction.php" title="Йдіть сюди, коли захочете продати чи
         купити картини">Аукціони</a>
-        <a href="gallery.html" title="Йдіть сюди, коли захочете знайти чи просто
+        <a href="gallery.php" title="Йдіть сюди, коли захочете знайти чи просто
         подивитися картини">Галерея</a>
-        <a href="account.html" title="Тут ваша секретна база, редагуйте все, що
+        <a href="account.php" title="Тут ваша секретна база, редагуйте все, що
         потрібно">Аккаунт</a>
       </nav>
     </header>
     <div class="Content">
-      <h1>Аккаунт</h1>
-      <aside>
-        <img src="" alt="Profile Photo">
-        <ul>
-          <li class="tab" onclick="openTabContent(event, 'Profile')">Профіль</li>
-          <li class="tab" onclick="openTabContent(event, 'Pictures')">Картини</li>
-          <li class="tab" onclick="openTabContent(event, 'Settings')">Настройки</li>
-        </ul>
-      </aside>
-      <div class="Main">
-        <div id="Profile" class="tabContent">
-          <p>Рівень активності</p>
-          <p>Пошта</p>
-          <p>Діяльність</p>
-          <p>Дата народження</p>
-          <p>Номер телефону</p>
-          <p>Про себе: </p>
-        </div>
-        <div id="Pictures" class="tabContent">
-
-        </div>
-        <div id="Settings" class="tabContent">
-          <div id="accordion">
-            <h2><a href="#head1">Змінити пароль</a></h2>
-            <div id="head1">
-              Here you'll change your password
-            </div>
-            <h2><a href="#head2">Настройки приватності</a></h2>
-            <div id="head2">
-              Here you'll change your private settings.
-            </div>
-          </div>
-        </div>
+      <h1>Головна</h1>
+      <div id="slideShow" style="margin: auto;">
+        <img src="img/image_1.jpg" alt="Preview Image 1.1"
+             data-image="img/image_1.jpg"
+             data-description="Preview Image 1.2">
+        <img src="img/image_2.jpg" alt="Preview Image 2.1"
+             data-image="img/image_2.jpg"
+             data-description="Preview Image 2.2">
+        <img src="img/image_3.jpg" alt="Preview Image 3.1"
+             data-image="img/image_3.jpg"
+             data-description="Preview Image 3.2">
+        <img src="img/image_4.jpg" alt="Preview Image 4.1"
+             data-image="img/image_4.jpg"
+             data-description="Preview Image 4.2">
+        <img src="img/image_5.jpg" alt="Preview Image 5.1"
+             data-image="img/image_5.jpg"
+             data-description="Preview Image 5.2">
+        <img src="img/image_6.jpg" alt="Preview Image 6.1"
+             data-image="img/image_6.jpg"
+             data-description="Preview Image 6.2">
       </div>
+      <p>
+        Параграф з описом сайту.
+      </p>
     </div>
     <footer>
       <div class="Contacts">
@@ -88,13 +72,14 @@
         </ul>
       </div>
       <div class="Info">
-        <h2>Про нас</h2>
+        <h2 title="&{window.document.lastModified};">Про нас</h2>
         <ul></ul>
       </div>
       <div class="Social">
         <h2>Соціальні мережі</h2>
         <div class="sharethis-inline-share-buttons"></div>
-        <script src="https://platform-api.sharethis.com/js/sharethis.js#property=60474966406a11001102d54c&product=inline-share-buttons"
+        <script src="https://platform-api.sharethis.com/js/sharethis.js
+        #property=60474966406a11001102d54c&product=inline-share-buttons"
                 async="async"></script>
       </div>
       <div class="meteoprog-informer"

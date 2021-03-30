@@ -6,64 +6,76 @@
     <meta name="keywords" content="Auction, Picture, Gallery">
     <meta name="author" content="Enthony Phil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аукціони</title>
+    <title>Аккаунт.</title>
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <script src="jquery-ui/external/jquery/jquery.js"></script>
     <script src="jquery-ui/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
     <link href="styles/styles.css" rel="stylesheet">
+    <style media="screen">
+      .ui-accordion-content, .ui-accordion-header {
+        background-color: var(--default-color);
+        color: var(--text-color);
+        font-family: Helvetica, sans-serif;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#accordion").accordion({
+          icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
+          heightStyle: "content",
+          collapsible: true,
+          active: false
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
-        <a href="news.html" title="Слідкуйте за оновленнями">Новини</a>
-        <a href="auction.html" title="Йдіть сюди, коли захочете продати чи
+        <a href="index.php" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.php" title="Слідкуйте за оновленнями">Новини</a>
+        <a href="auction.php" title="Йдіть сюди, коли захочете продати чи
         купити картини">Аукціони</a>
-        <a href="gallery.html" title="Йдіть сюди, коли захочете знайти чи просто
+        <a href="gallery.php" title="Йдіть сюди, коли захочете знайти чи просто
         подивитися картини">Галерея</a>
-        <a href="account.html" title="Тут ваша секретна база, редагуйте все, що
+        <a href="account.php" title="Тут ваша секретна база, редагуйте все, що
         потрібно">Аккаунт</a>
       </nav>
     </header>
     <div class="Content">
-      <h1>Аукціони</h1>
+      <h1>Аккаунт</h1>
       <aside>
+        <img src="" alt="Profile Photo">
         <ul>
-          <li class="tab" onclick="openTabContent(event, 'Active')">Активні</li>
-          <li class="tab" onclick="openTabContent(event, 'Future')">Очікувані</li>
-          <li class="tab" onclick="openTabContent(event, 'Past')">Минулі</li>
+          <li class="tab" onclick="openTabContent(event, 'Profile')">Профіль</li>
+          <li class="tab" onclick="openTabContent(event, 'Pictures')">Картини</li>
+          <li class="tab" onclick="openTabContent(event, 'Settings')">Настройки</li>
         </ul>
       </aside>
       <div class="Main">
-        <div id="Active" class="tabContent">
+        <div id="Profile" class="tabContent">
+          <p>Рівень активності</p>
+          <p>Пошта</p>
+          <p>Діяльність</p>
+          <p>Дата народження</p>
+          <p>Номер телефону</p>
+          <p>Про себе: </p>
+        </div>
+        <div id="Pictures" class="tabContent">
 
         </div>
-        <div id="Future" class="tabContent">
-          <table>
-            <caption>Очікувані аукціони</caption>
-            <thead>
-              <tr>
-                <th>Інформація</th>
-                <th>Картина</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Власник</td>
-                <td rowspan="3"><img src="" alt="Зображення картини"></td>
-              </tr>
-              <tr>
-                <td>Дата/час</td>
-              </tr>
-              <tr>
-                <td>Стартова ціна</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="Past" class="tabContent">
-
+        <div id="Settings" class="tabContent">
+          <div id="accordion">
+            <h2><a href="#head1">Змінити пароль</a></h2>
+            <div id="head1">
+              Here you'll change your password
+            </div>
+            <h2><a href="#head2">Настройки приватності</a></h2>
+            <div id="head2">
+              Here you'll change your private settings.
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -16,13 +16,13 @@
   <body>
     <header>
       <nav>
-        <a href="index.html" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
-        <a href="news.html" title="Слідкуйте за оновленнями">Новини</a>
-        <a href="auction.html" title="Йдіть сюди, коли захочете продати чи
+        <a href="index.php" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.php" title="Слідкуйте за оновленнями">Новини</a>
+        <a href="auction.php" title="Йдіть сюди, коли захочете продати чи
         купити картини">Аукціони</a>
-        <a href="gallery.html" title="Йдіть сюди, коли захочете знайти чи просто
+        <a href="gallery.php" title="Йдіть сюди, коли захочете знайти чи просто
         подивитися картини">Галерея</a>
-        <a href="account.html" title="Тут ваша секретна база, редагуйте все, що
+        <a href="account.php" title="Тут ваша секретна база, редагуйте все, що
         потрібно">Аккаунт</a>
       </nav>
     </header>

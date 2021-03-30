@@ -6,62 +6,66 @@
     <meta name="keywords" content="Auction, Picture, Gallery">
     <meta name="author" content="Enthony Phil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна.</title>
+    <title>Аукціони</title>
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <script src="jquery-ui/external/jquery/jquery.js"></script>
     <script src="jquery-ui/jquery-ui.js"></script>
-    <script src="unitegallery/js/unitegallery.min.js"></script>
-    <link rel="stylesheet" href="unitegallery/css/unite-gallery.css">
-    <script src="unitegallery/themes/slider/ug-theme-slider.js"></script>
     <link rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
     <link href="styles/styles.css" rel="stylesheet">
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#slideShow").unitegallery({
-          gallery_theme: "slider",
-          slider_scale_mode: "fit"
-        })
-      })
-    </script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
-        <a href="news.html" title="Слідкуйте за оновленнями">Новини</a>
-        <a href="auction.html" title="Йдіть сюди, коли захочете продати чи
+        <a href="index.php" title="Повертайтесь сюди, як загубитеся"><img id="Logo" src="" alt="Logo">Головна</a>
+        <a href="news.php" title="Слідкуйте за оновленнями">Новини</a>
+        <a href="auction.php" title="Йдіть сюди, коли захочете продати чи
         купити картини">Аукціони</a>
-        <a href="gallery.html" title="Йдіть сюди, коли захочете знайти чи просто
+        <a href="gallery.php" title="Йдіть сюди, коли захочете знайти чи просто
         подивитися картини">Галерея</a>
-        <a href="account.html" title="Тут ваша секретна база, редагуйте все, що
+        <a href="account.php" title="Тут ваша секретна база, редагуйте все, що
         потрібно">Аккаунт</a>
       </nav>
     </header>
     <div class="Content">
-      <h1>Головна</h1>
-      <div id="slideShow" style="margin: auto;">
-        <img src="img/image_1.jpg" alt="Preview Image 1.1"
-             data-image="img/image_1.jpg"
-             data-description="Preview Image 1.2">
-        <img src="img/image_2.jpg" alt="Preview Image 2.1"
-             data-image="img/image_2.jpg"
-             data-description="Preview Image 2.2">
-        <img src="img/image_3.jpg" alt="Preview Image 3.1"
-             data-image="img/image_3.jpg"
-             data-description="Preview Image 3.2">
-        <img src="img/image_4.jpg" alt="Preview Image 4.1"
-             data-image="img/image_4.jpg"
-             data-description="Preview Image 4.2">
-        <img src="img/image_5.jpg" alt="Preview Image 5.1"
-             data-image="img/image_5.jpg"
-             data-description="Preview Image 5.2">
-        <img src="img/image_6.jpg" alt="Preview Image 6.1"
-             data-image="img/image_6.jpg"
-             data-description="Preview Image 6.2">
+      <h1>Аукціони</h1>
+      <aside>
+        <ul>
+          <li class="tab" onclick="openTabContent(event, 'Active')">Активні</li>
+          <li class="tab" onclick="openTabContent(event, 'Future')">Очікувані</li>
+          <li class="tab" onclick="openTabContent(event, 'Past')">Минулі</li>
+        </ul>
+      </aside>
+      <div class="Main">
+        <div id="Active" class="tabContent">
+
+        </div>
+        <div id="Future" class="tabContent">
+          <table>
+            <caption>Очікувані аукціони</caption>
+            <thead>
+              <tr>
+                <th>Інформація</th>
+                <th>Картина</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Власник</td>
+                <td rowspan="3"><img src="" alt="Зображення картини"></td>
+              </tr>
+              <tr>
+                <td>Дата/час</td>
+              </tr>
+              <tr>
+                <td>Стартова ціна</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="Past" class="tabContent">
+
+        </div>
       </div>
-      <p>
-        Параграф з описом сайту.
-      </p>
     </div>
     <footer>
       <div class="Contacts">
@@ -72,14 +76,13 @@
         </ul>
       </div>
       <div class="Info">
-        <h2 title="&{window.document.lastModified};">Про нас</h2>
+        <h2>Про нас</h2>
         <ul></ul>
       </div>
       <div class="Social">
         <h2>Соціальні мережі</h2>
         <div class="sharethis-inline-share-buttons"></div>
-        <script src="https://platform-api.sharethis.com/js/sharethis.js
-        #property=60474966406a11001102d54c&product=inline-share-buttons"
+        <script src="https://platform-api.sharethis.com/js/sharethis.js#property=60474966406a11001102d54c&product=inline-share-buttons"
                 async="async"></script>
       </div>
       <div class="meteoprog-informer"
